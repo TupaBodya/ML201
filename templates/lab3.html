@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+{{ super() }}
+<p>Метод модели Дерево условий
+<form action="/p_lab3" method="POST">
+    <p><input type="text" class="form_text" name="Weight"> Введите массу авто в килограммах</p>
+    <p><input name="Power" class="form_text" type="text"> Введите мощность авто в л/с</p>
+    <p><input name="Seats" class="form_text" type="text"> Введите кол-во сидячих мест в авто</p>
+    <p><input name="Fuel" class="form_text" type="text"> Введите расход топлива в литрах на 100 км.</p>
+    <p><input name="KPP" class="form_text" type="text"> Выберите коробку передач, где 0- Механика, 1- Автомат</p>
+    <input type="submit" class="form_btn" value="Узнать тип авто">
+    <h1>{{class_model}}</h1>
+    </p>
+</form>
+{% endblock %}
